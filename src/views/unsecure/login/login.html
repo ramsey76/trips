@@ -1,0 +1,14 @@
+<v-card>
+    <v-img :src="require('@/assets/Tripslogo.png')" />
+    <v-form lazy-validation v-model="isValid" ref="form">
+    <v-card-text>
+        <v-text-field label="email" v-model="localCredentials.userName" type="text" :rules="textFieldRule" />
+        <v-text-field label="password" v-model="localCredentials.passWord" type="password" :rules="textFieldRule" />
+    </v-card-text>
+    <v-card-actions>
+        <v-col cols="8" align-self="end">
+            <v-btn @click="login">Login</v-btn>&nbsp;&nbsp;<v-btn @click="register">Register</v-btn>
+        </v-col>
+    </v-card-actions>
+    </v-form>
+</v-card>
